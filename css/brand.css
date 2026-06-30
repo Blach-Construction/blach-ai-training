@@ -1,0 +1,70 @@
+/* ============================================================
+   Blach Construction — Brand foundation
+   Gotham type stack + official brand color palette.
+   (Internal training site — Gotham webfonts embedded for
+   internal use only.)
+   ============================================================ */
+
+@font-face {
+  font-family: "Gotham Light";
+  src: url("../assets/fonts/Gotham-Light.woff") format("woff");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Light Italic";
+  src: url("../assets/fonts/Gotham-LightItalic.woff") format("woff");
+  font-weight: normal; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("../assets/fonts/Gotham-Book.woff") format("woff");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Book Italic";
+  src: url("../assets/fonts/Gotham-BookItalic.woff") format("woff");
+  font-weight: normal; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("../assets/fonts/Gotham-Medium.woff") format("woff");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Bold";
+  src: url("../assets/fonts/Gotham-Bold.woff") format("woff");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Black";
+  src: url("../assets/fonts/Gotham-Black.woff") format("woff");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+
+:root {
+  /* Primary */
+  --blach-blue: #0076BB;
+  --blach-grey: #A2A9AD;
+  /* Secondary / accent */
+  --cyan: #00AEEF;
+  --teal: #009CA6;
+  --dark-blue: #00487A;
+  --navy: #003B64;
+  /* Highlights */
+  --red: #C10230;
+  --orange: #FE5000;
+  --yellow: #F5A800;
+  --green: #80BC00;
+  --light-grey: #CFD2D3;
+  --dark-grey: #5B6670;
+  --black: #231F20;
+  --white: #FFFFFF;
+
+  /* Type roles */
+  --font-body: "Gotham Book", Arial, sans-serif;
+  --font-book: "Gotham Book", Arial, sans-serif;
+  --font-light: "Gotham Light", Arial, sans-serif;
+  --font-medium: "Gotham Medium", Arial, sans-serif;
+  --font-bold: "Gotham Bold", Arial, sans-serif;
+  --font-black: "Gotham Black", Arial, sans-serif;
+}

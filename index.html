@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blach AI Training Hub — Getting Started with Claude</title>
+  <meta name="description" content="Blach Construction's AI training hub. Watch, do, and explore your way to using Claude in your workday." />
+  <link rel="icon" type="image/png" href="assets/img/blach-logo-bug-blue.png" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+  <link rel="stylesheet" href="css/brand.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="nav-brand">
+        <img class="nav-logo" src="assets/img/blach-logo-horizontal-white.png" alt="Blach Construction" />
+        <span class="divider"></span>
+        <span class="wordmark">AI Training Hub</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#watch">Watch &amp; Learn</a>
+        <a href="#toolkit">The Toolkit</a>
+        <a href="#guides">Guides</a>
+      </nav>
+      <div class="nav-progress" title="Your overall progress">
+        <svg class="ring" viewBox="0 0 34 34" aria-hidden="true">
+          <circle class="bg" cx="17" cy="17" r="15"></circle>
+          <circle class="fg" cx="17" cy="17" r="15"></circle>
+        </svg>
+        <span class="pct">0%</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <div class="wrap">
+      <span class="eyebrow">Build Better · with AI</span>
+      <h1>Getting Started with <span class="accent">Claude</span></h1>
+      <p class="lede">Your friendly home base for learning the AI tools we use at Blach. Watch a video, try it yourself, and explore at your own pace — we'll keep track of where you left off.</p>
+      <div class="hero-cta">
+        <a href="#watch" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Start watching
+        </a>
+        <button id="celebrate" class="btn btn-ghost" type="button">🎉 Celebrate</button>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#f4f7fa" d="M0,40 C360,90 1080,0 1440,45 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <!-- ============ PROGRESS BANNER ============ -->
+  <div class="wrap">
+    <div class="progress-banner reveal">
+      <div class="pb-icon">📈</div>
+      <div class="pb-text">
+        <strong>Your learning progress</strong>
+        <div class="sub pb-sub-dynamic">Pick a video below to get started — your progress saves automatically.</div>
+        <div class="progress-bar-track"><div class="progress-bar-fill"></div></div>
+      </div>
+      <div class="pb-count">0/0</div>
+    </div>
+  </div>
+
+  <!-- ============ WATCH & LEARN ============ -->
+  <section class="block" id="watch">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Watch &amp; Learn</span>
+        <h2>Learn by watching</h2>
+        <p>Short, friendly walkthroughs. Press play to start — clicking a video marks it complete, or use the button to track it yourself.</p>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- FEATURED -->
+        <article class="video-card featured reveal" data-id="rRrBbyv3ChM" data-title="Full Claude Tutorial for Beginners">
+          <div class="vc-media">
+            <span class="vc-badge start">Start here</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/rRrBbyv3ChM/hqdefault.jpg" alt="Full Claude Tutorial for Beginners thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Full Claude Tutorial for Beginners</h3>
+            <p class="author"><b>AI Foundations</b> · a guided tour of the basics</p>
+            <p class="desc" style="font-family:var(--font-book);color:#46525c;margin-bottom:18px;">New to Claude? Start right here. This is the friendliest end-to-end intro — what Claude is, how to talk to it, and how to get great results from day one.</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=rRrBbyv3ChM" target="_blank" rel="noopener">Open on YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- COWORK -->
+        <article class="video-card reveal" data-id="uGwDuvSqgYI" data-title="Claude Cowork Fundamentals">
+          <div class="vc-media">
+            <span class="vc-badge cowork">Cowork</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/uGwDuvSqgYI/hqdefault.jpg" alt="Claude Cowork Fundamentals thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Claude Cowork Fundamentals</h3>
+            <p class="author"><b>Tina Huang</b> · automations and projects in 22 minutes</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=uGwDuvSqgYI" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SKILLS -->
+        <article class="video-card reveal d1" data-id="YkpEX_jlb04" data-title="Build Claude Skills from Scratch">
+          <div class="vc-media">
+            <span class="vc-badge skills">Skills</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/YkpEX_jlb04/hqdefault.jpg" alt="Build Claude Skills from Scratch thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Build Claude Skills from Scratch</h3>
+            <p class="author"><b>AI Foundations</b> · create reusable, on-brand workflows</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=YkpEX_jlb04" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CONNECTORS -->
+        <article class="video-card reveal d2" data-id="sBdPnK8pucY" data-title="Claude Connectors for Beginners">
+          <div class="vc-media">
+            <span class="vc-badge connectors">Connectors</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/sBdPnK8pucY/hqdefault.jpg" alt="Claude Connectors for Beginners thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Claude Connectors for Beginners</h3>
+            <p class="author">Link Claude to the apps you already use</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=sBdPnK8pucY" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTIFACTS -->
+        <article class="video-card reveal" data-id="eJ0wsftaMuA" data-title="Build a Dashboard — No Coding">
+          <div class="vc-media">
+            <span class="vc-badge artifacts">Artifacts</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/eJ0wsftaMuA/hqdefault.jpg" alt="Build a Dashboard with no coding thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Build a Dashboard — No Coding</h3>
+            <p class="author"><b>Prof. Ryan Ahmed</b> · analyze and visualize data</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=eJ0wsftaMuA" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- COWORK TIPS -->
+        <article class="video-card reveal d1" data-id="76aUqqi-Gak" data-title="12 Hidden Tricks to Level Up Cowork">
+          <div class="vc-media">
+            <span class="vc-badge tips">Cowork tips</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/76aUqqi-Gak/hqdefault.jpg" alt="12 Hidden Tricks to Level Up Cowork thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>12 Hidden Tricks to Level Up Cowork</h3>
+            <p class="author"><b>Paul J Lipsky</b> · power-user tips</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=76aUqqi-Gak" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLKIT ============ -->
+  <section class="block toolkit-wrap" id="toolkit">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">The Toolkit</span>
+        <h2>Learn by doing</h2>
+        <p>Claude is one platform with a handful of tools — each suited to a different kind of work. Tap a card to mark it explored as you try each one.</p>
+      </div>
+
+      <div class="tool-grid">
+
+        <article class="tool-card reveal" data-key="chat">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/chat.png" alt="" /></div>
+          <h3>Claude (Chat)</h3>
+          <p class="desc">The everyday assistant. Ask questions, draft and edit writing, summarize long documents or analyze information through a simple conversation.</p>
+          <span class="useit"><b>Use it when</b>you need a fast first draft, a quick summary or a clear answer.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d1" data-key="projects">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/projects.png" alt="" /></div>
+          <h3>Projects</h3>
+          <p class="desc">A dedicated workspace that holds your instructions and reference files so every chat starts with the right context.</p>
+          <span class="useit"><b>Use it when</b>you do recurring work like proposals and want Claude primed every time.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d2" data-key="skills">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/skills.png" alt="" /></div>
+          <h3>Skills</h3>
+          <p class="desc">Reusable instructions that teach Claude to do a task the same way each time — like our Blach branding skill.</p>
+          <span class="useit"><b>Use it when</b>you want on-brand, consistent output without re-explaining the rules.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal" data-key="connectors">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/connectors.png" alt="" /></div>
+          <h3>Connectors</h3>
+          <p class="desc">Secure links between Claude and the apps we already use, such as Egnyte, Box, Monday.com and Microsoft 365.</p>
+          <span class="useit"><b>Use it when</b>you want Claude to pull from or work with company files and tools.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d1" data-key="artifacts">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/artifacts.png" alt="" /></div>
+          <h3>Artifacts</h3>
+          <p class="desc">Editable documents, slides, spreadsheets and visuals that build right beside your chat.</p>
+          <span class="useit"><b>Use it when</b>you are creating a deliverable you will refine, reuse and download.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d2" data-key="cowork">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/cowork.png" alt="" /></div>
+          <h3>Cowork</h3>
+          <p class="desc">A desktop app where Claude carries out multi-step tasks on its own across your files and connected apps.</p>
+          <span class="useit"><b>Use it when</b>a job has several steps and you want Claude to run the whole sequence.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal" data-key="claude-code">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/claude-code.png" alt="" /></div>
+          <h3>Claude Code</h3>
+          <p class="desc">An agentic tool for building and automating — from simple scripts to working tools, sites and apps. No coding background required.</p>
+          <span class="useit"><b>Use it when</b>you want to automate a workflow or build a small custom tool.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card promo reveal d1" style="border-left-color:var(--cyan);background:linear-gradient(135deg,#003B64,#0076BB);color:#fff;cursor:default;">
+          <h3 style="color:#fff;">New here? Start simple ✨</h3>
+          <p class="desc" style="color:rgba(255,255,255,0.9);">Open Chat and ask Claude to help with a real task you have today — a summary, an email or a first draft. Add Projects, Skills and Connectors as your work grows.</p>
+          <span class="tool-explore" style="color:rgba(255,255,255,0.85);">You've got this!</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GUIDES ============ -->
+  <section class="block" id="guides">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Take it with you</span>
+        <h2>Quick-start guides</h2>
+        <p>Prefer a printable cheat sheet? Download the one-page guides to keep the toolkit handy at your desk.</p>
+      </div>
+      <div class="guide-grid">
+        <a class="guide-card reveal" href="assets/guides/Claude_Quick_Start_Guide.pdf" target="_blank" rel="noopener" download>
+          <div class="gicon"><span>PDF</span></div>
+          <div class="gtext">
+            <h3>Getting Started with Claude</h3>
+            <p>The one-page quick-reference for the Blach team.</p>
+          </div>
+          <div class="dl">↓</div>
+        </a>
+        <a class="guide-card reveal d1" href="assets/guides/Claude_Quick_Start_Guide_Icons.pdf" target="_blank" rel="noopener" download>
+          <div class="gicon"><span>PDF</span></div>
+          <div class="gtext">
+            <h3>Quick-Start Guide (Icon Edition)</h3>
+            <p>The same toolkit overview with visual icons.</p>
+          </div>
+          <div class="dl">↓</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="f-top">
+        <img class="f-logo" src="assets/img/blach-logo-horizontal-white.png" alt="Blach Construction" />
+        <span class="tag">Build Better · with AI</span>
+        <a href="#" id="reset-progress" style="margin-left:auto;font-size:0.82rem;">Reset my progress</a>
+      </div>
+      <div class="note">
+        Internal training resource — please keep client names, project details and pricing confidential in Claude.<br />
+        <span class="warn">Questions on Blach branding:</span> Kate Vernon, Senior Director of Marketing · <a href="mailto:kate.vernon@blach.com">kate.vernon@blach.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
