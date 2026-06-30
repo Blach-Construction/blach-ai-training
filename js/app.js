@@ -12,6 +12,16 @@
   var STORAGE_KEY = "blach-ai-training:v1:" + PAGE;
   var BRAND_COLORS = ["#0076BB", "#00AEEF", "#009CA6", "#F5A800", "#80BC00", "#FE5000", "#FFFFFF"];
 
+  /* Blach "B" bug logo, mixed in as a confetti piece */
+  var LOGO = new Image();
+  var logoReady = false;
+  LOGO.onload = function () { logoReady = true; };
+  LOGO.src = "assets/img/blach-logo-bug-blue.png";
+  function pickShape() {
+    if (logoReady && Math.random() < 0.24) return "logo";
+    return Math.random() < 0.5 ? "rect" : "circle";
+  }
+
   /* ---------- progress state ---------- */
   function loadState() {
     try {
@@ -54,7 +64,7 @@
         vr: (Math.random() - 0.5) * 0.35,
         life: 1,
         decay: 0.006 + Math.random() * 0.01,
-        shape: Math.random() < 0.5 ? "rect" : "circle"
+        shape: pickShape()
       });
     }
     if (!rafId) tick();
@@ -83,7 +93,7 @@
         color: BRAND_COLORS[(Math.random() * BRAND_COLORS.length) | 0],
         rot: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.4,
         life: 1, decay: 0.005 + Math.random() * 0.008,
-        shape: Math.random() < 0.5 ? "rect" : "circle"
+        shape: pickShape()
       });
     }
     if (!rafId) tick();
@@ -101,8 +111,15 @@
       ctx.globalAlpha = Math.max(0, p.life);
       ctx.translate(p.x, p.y); ctx.rotate(p.rot);
       ctx.fillStyle = p.color;
-      if (p.shape === "rect") ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
-      else { ctx.beginPath(); ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2); ctx.fill(); }
+      if (p.shape === "logo" && logoReady) {
+        var s = p.size * 2.7;
+        var ar = (LOGO.naturalHeight || 1) / (LOGO.naturalWidth || 1);
+        ctx.drawImage(LOGO, -s / 2, -(s * ar) / 2, s, s * ar);
+      } else if (p.shape === "rect") {
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+      } else {
+        ctx.beginPath(); ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2); ctx.fill();
+      }
       ctx.restore();
     }
     if (particles.length) { rafId = requestAnimationFrame(tick); }
