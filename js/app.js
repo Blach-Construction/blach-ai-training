@@ -8,7 +8,8 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "blach-ai-training:v1";
+  var PAGE = (document.body.getAttribute("data-page") || "home");
+  var STORAGE_KEY = "blach-ai-training:v1:" + PAGE;
   var BRAND_COLORS = ["#0076BB", "#00AEEF", "#009CA6", "#F5A800", "#80BC00", "#FE5000", "#FFFFFF"];
 
   /* ---------- progress state ---------- */
@@ -266,6 +267,19 @@
     updateMeter(true);
     toast("↺", "Progress reset — fresh start!");
   });
+
+  /* ---------- departments dropdown ---------- */
+  var dd = document.querySelector(".nav-dd");
+  if (dd) {
+    var ddBtn = dd.querySelector("button");
+    ddBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      dd.classList.toggle("open");
+      ddBtn.setAttribute("aria-expanded", dd.classList.contains("open"));
+    });
+    document.addEventListener("click", function () { dd.classList.remove("open"); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") dd.classList.remove("open"); });
+  }
 
   /* ---------- scroll reveals ---------- */
   if ("IntersectionObserver" in window && !reduceMotion) {

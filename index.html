@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/brand.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body data-page="home">
   <canvas id="confetti-canvas" aria-hidden="true"></canvas>
 
   <!-- ============ NAV ============ -->
@@ -26,6 +26,14 @@
         <a href="#watch">Watch &amp; Learn</a>
         <a href="#toolkit">The Toolkit</a>
         <a href="#guides">Guides</a>
+        <div class="nav-dd">
+          <button type="button" aria-haspopup="true" aria-expanded="false">Departments <span class="caret">▼</span></button>
+          <div class="menu" role="menu">
+            <div class="dd-head">By department</div>
+            <a href="marketing.html" role="menuitem"><span class="dot"></span> Marketing</a>
+            <a href="#" class="soon" role="menuitem"><span class="dot"></span> More teams <span class="tag-soon">Soon</span></a>
+          </div>
+        </div>
       </nav>
       <div class="nav-progress" title="Your overall progress">
         <svg class="ring" viewBox="0 0 34 34" aria-hidden="true">
