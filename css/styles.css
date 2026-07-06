@@ -266,6 +266,7 @@ section.block { padding: 66px 0; }
 .vc-badge.workflows { background: var(--dark-blue); }
 .vc-badge.strategy { background: var(--navy); }
 .vc-badge.design { background: var(--green); color: #143300; }
+.vc-badge.prompting { background: var(--dark-blue); }
 
 /* workflow card tag (Marketing page) */
 .tool-card .tooltag {
