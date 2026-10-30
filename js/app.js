@@ -9,7 +9,25 @@
   "use strict";
 
   var PAGE = (document.body.getAttribute("data-page") || "home");
-  var STORAGE_KEY = "blach-ai-training:v1:" + PAGE;
+  var TRACK_KEY = "blach-ai-training:v1:track";
+  var TRACK_NAMES = { claude: "Claude", chatgpt: "ChatGPT" };
+  var trackEls = Array.prototype.slice.call(document.querySelectorAll("[data-track]"));
+  var track = trackEls.length ? initialTrack() : null;
+
+  /* track comes from ?ai=, then the last choice on this device, then Claude */
+  function initialTrack() {
+    var m = /[?&]ai=(claude|chatgpt)\b/i.exec(location.search);
+    if (m) return m[1].toLowerCase();
+    try {
+      var saved = localStorage.getItem(TRACK_KEY);
+      if (TRACK_NAMES[saved]) return saved;
+    } catch (e) {}
+    return "claude";
+  }
+  /* Claude keeps the original per-page key so existing progress carries over */
+  function storageKey() {
+    return "blach-ai-training:v1:" + PAGE + (track && track !== "claude" ? "-" + track : "");
+  }
   var BRAND_COLORS = ["#0076BB", "#00AEEF", "#009CA6", "#F5A800", "#80BC00", "#FE5000", "#FFFFFF"];
 
   /* Blach "B" bug logo, mixed in as a confetti piece */
@@ -25,13 +43,13 @@
   /* ---------- progress state ---------- */
   function loadState() {
     try {
-      var raw = localStorage.getItem(STORAGE_KEY);
+      var raw = localStorage.getItem(storageKey());
       if (raw) return JSON.parse(raw);
     } catch (e) {}
     return { videos: {}, tools: {}, celebrated: false };
   }
   function saveState() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    try { localStorage.setItem(storageKey(), JSON.stringify(state)); } catch (e) {}
   }
   var state = loadState();
 
@@ -139,9 +157,21 @@
   }
 
   /* ---------- progress meter ---------- */
-  var videoCards = Array.prototype.slice.call(document.querySelectorAll(".video-card"));
-  var toolCards = Array.prototype.slice.call(document.querySelectorAll(".tool-card:not(.promo)"));
-  var TOTAL = videoCards.length + toolCards.length;
+  var allVideoCards = Array.prototype.slice.call(document.querySelectorAll(".video-card"));
+  var allToolCards = Array.prototype.slice.call(document.querySelectorAll(".tool-card:not(.promo)"));
+  var videoCards, toolCards, TOTAL;
+
+  /* progress only counts the cards in the active track */
+  function inTrack(el) {
+    var t = track && el.closest("[data-track]");
+    return !t || t.getAttribute("data-track") === track;
+  }
+  function scopeCards() {
+    videoCards = allVideoCards.filter(inTrack);
+    toolCards = allToolCards.filter(inTrack);
+    TOTAL = videoCards.length + toolCards.length;
+  }
+  scopeCards();
 
   var ring = document.querySelector(".nav-progress .fg");
   var ringLen = ring ? (2 * Math.PI * 15) : 0;
@@ -166,7 +196,7 @@
     if (countEl) countEl.textContent = d + "/" + TOTAL;
     if (subEl) {
       subEl.textContent = pct === 0 ? "Pick a video below to get started — your progress saves automatically."
-        : pct === 100 ? "You completed every video and explored every tool. You're a Claude pro! 🎉"
+        : pct === 100 ? "You completed every video and explored every tool. You're a " + (TRACK_NAMES[track] || "Claude") + " pro! 🎉"
         : "Nicely done — " + (TOTAL - d) + " to go. Keep exploring!";
     }
     return pct;
@@ -215,13 +245,7 @@
     if (!state.videos[id]) markVideo(card, true);
   }
 
-  videoCards.forEach(function (card) {
-    var id = card.getAttribute("data-id");
-    if (state.videos[id]) {
-      card.classList.add("watched");
-      var lbl = card.querySelector(".mark-btn .label");
-      if (lbl) lbl.textContent = "Completed";
-    }
+  allVideoCards.forEach(function (card) {
     var media = card.querySelector(".vc-media");
     media.addEventListener("click", function () { loadVideo(card); });
     var btn = card.querySelector(".mark-btn");
@@ -248,16 +272,51 @@
     checkMilestones(prev, now);
   }
 
-  toolCards.forEach(function (card) {
-    var key = card.getAttribute("data-key");
-    if (state.tools[key]) {
-      card.classList.add("explored");
-      var lbl = card.querySelector(".tool-explore .label");
-      if (lbl) lbl.textContent = "Explored";
-    }
+  allToolCards.forEach(function (card) {
     card.addEventListener("click", function () {
       markTool(card, !card.classList.contains("explored"));
     });
+  });
+
+  /* sync card checkmarks with the current track's saved state */
+  function paintCards() {
+    videoCards.forEach(function (c) {
+      var on = !!state.videos[c.getAttribute("data-id")];
+      c.classList.toggle("watched", on);
+      var l = c.querySelector(".mark-btn .label"); if (l) l.textContent = on ? "Completed" : "Mark complete";
+    });
+    toolCards.forEach(function (c) {
+      var on = !!state.tools[c.getAttribute("data-key")];
+      c.classList.toggle("explored", on);
+      var l = c.querySelector(".tool-explore .label"); if (l) l.textContent = on ? "Explored" : "Tap to mark explored";
+    });
+  }
+
+  /* ---------- Claude / ChatGPT track switch ---------- */
+  var aiToggle = document.querySelector(".ai-toggle");
+  function applyTrack(t, remember) {
+    track = t;
+    trackEls.forEach(function (el) { el.hidden = el.getAttribute("data-track") !== t; });
+    if (aiToggle) {
+      aiToggle.setAttribute("data-active", t);
+      aiToggle.querySelectorAll("button").forEach(function (b) {
+        b.setAttribute("aria-checked", b.getAttribute("data-value") === t ? "true" : "false");
+      });
+    }
+    state = loadState();
+    scopeCards();
+    paintCards();
+    updateMeter(false);
+    if (remember) {
+      try { localStorage.setItem(TRACK_KEY, t); } catch (e) {}
+      if (window.history && history.replaceState) {
+        history.replaceState(null, "", location.pathname + (t === "claude" ? "" : "?ai=" + t) + location.hash);
+      }
+    }
+  }
+  if (aiToggle) aiToggle.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-value]");
+    if (b && b.getAttribute("data-value") !== track) applyTrack(b.getAttribute("data-value"), true);
   });
 
   /* ---------- celebrate button (hero) ---------- */
@@ -273,14 +332,7 @@
     if (!confirm("Reset your training progress on this device?")) return;
     state = { videos: {}, tools: {}, celebrated: false };
     saveState();
-    videoCards.forEach(function (c) {
-      c.classList.remove("watched");
-      var l = c.querySelector(".mark-btn .label"); if (l) l.textContent = "Mark complete";
-    });
-    toolCards.forEach(function (c) {
-      c.classList.remove("explored");
-      var l = c.querySelector(".tool-explore .label"); if (l) l.textContent = "Tap to mark explored";
-    });
+    paintCards();
     updateMeter(true);
     toast("↺", "Progress reset — fresh start!");
   });
@@ -311,5 +363,6 @@
   }
 
   /* initial paint */
-  updateMeter(false);
+  if (track) applyTrack(track, false);
+  else { paintCards(); updateMeter(false); }
 })();

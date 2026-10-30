@@ -1,6 +1,6 @@
 # Blach AI Training Hub
 
-An internal, employee-facing training hub for getting started with Claude at Blach Construction.
+An internal, employee-facing training hub for getting started with AI at Blach Construction. The Home page has a Claude / ChatGPT toggle: each track has its own videos, toolkit, guides and progress (`?ai=chatgpt` links straight to the ChatGPT track). Department pages are Claude-only for now. ChatGPT guide sources live in `guides-src/`.
 
 **Live site:** https://blach-construction.github.io/blach-ai-training/ (GitHub Pages, internal/private repo)
 
