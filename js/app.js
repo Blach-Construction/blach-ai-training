@@ -9,6 +9,7 @@
   "use strict";
 
   var PAGE = (document.body.getAttribute("data-page") || "home");
+  var PLATFORM = (document.body.getAttribute("data-platform") || "Claude");
   var STORAGE_KEY = "blach-ai-training:v1:" + PAGE;
   var BRAND_COLORS = ["#0076BB", "#00AEEF", "#009CA6", "#F5A800", "#80BC00", "#FE5000", "#FFFFFF"];
 
@@ -166,7 +167,7 @@
     if (countEl) countEl.textContent = d + "/" + TOTAL;
     if (subEl) {
       subEl.textContent = pct === 0 ? "Pick a video below to get started — your progress saves automatically."
-        : pct === 100 ? "You completed every video and explored every tool. You're a Claude pro! 🎉"
+        : pct === 100 ? "You completed every video and explored every tool. You're a " + PLATFORM + " pro! 🎉"
         : "Nicely done — " + (TOTAL - d) + " to go. Keep exploring!";
     }
     return pct;

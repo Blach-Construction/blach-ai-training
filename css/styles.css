@@ -217,6 +217,10 @@ section.block { padding: 66px 0; }
   display: grid; gap: 26px;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 }
+.video-grid.pair { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 720px) {
+  .video-grid.pair { grid-template-columns: 1fr; }
+}
 .video-card {
   background: #fff; border-radius: 18px; overflow: hidden;
   border: 1px solid #e4e9ef; box-shadow: 0 4px 18px rgba(0,59,100,0.05);
