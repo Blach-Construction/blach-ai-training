@@ -233,6 +233,12 @@
     if (card.getAttribute("data-loaded")) return;
     var media = card.querySelector(".vc-media");
     var id = card.getAttribute("data-id");
+    // some uploaders turn off embedding; send those straight to YouTube
+    if (card.hasAttribute("data-no-embed")) {
+      window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener");
+      if (!state.videos[id]) markVideo(card, true);
+      return;
+    }
     var iframe = document.createElement("iframe");
     iframe.src = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&modestbranding=1&autoplay=1";
     iframe.title = card.getAttribute("data-title") || "Training video";
