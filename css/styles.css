@@ -146,6 +146,33 @@ a:hover { text-decoration: underline; }
   padding: 7px 16px; border: 1px solid rgba(0,174,239,0.5); border-radius: 999px;
   background: rgba(0,174,239,0.08);
 }
+/* Claude / ChatGPT track switch (home hero) */
+.ai-toggle {
+  position: relative; z-index: 2; display: inline-grid; grid-template-columns: 1fr 1fr;
+  padding: 6px; margin-bottom: 26px; border-radius: 999px;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.28);
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.15);
+}
+.ai-toggle button {
+  position: relative; z-index: 1; min-width: 210px; padding: 18px 36px;
+  background: none; border: 0; border-radius: 999px; cursor: pointer;
+  font-family: var(--font-black); font-size: 1.45rem; letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.78); transition: color .3s ease;
+}
+.ai-toggle button:hover { color: #fff; }
+.ai-toggle button[aria-checked="true"] { color: var(--navy); }
+.ai-toggle button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.ai-toggle .knob {
+  position: absolute; top: 6px; bottom: 6px; left: 6px; width: calc(50% - 6px);
+  border-radius: 999px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.ai-toggle[data-active="chatgpt"] .knob { transform: translateX(100%); }
+.track[hidden] { display: none; }
+@media (max-width: 520px) {
+  .ai-toggle button { min-width: 140px; padding: 14px 18px; font-size: 1.12rem; }
+}
+
 .hero h1 {
   font-family: var(--font-black);
   font-size: clamp(2.3rem, 5.4vw, 4rem); margin-bottom: 18px;
@@ -217,6 +244,14 @@ section.block { padding: 66px 0; }
   display: grid; gap: 26px;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 }
+.step-head { margin: 46px 0 20px; }
+.step-head:first-of-type { margin-top: 0; }
+.step-head .kicker {
+  font-family: var(--font-bold); color: var(--blach-blue);
+  font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+}
+.step-head h3 { font-family: var(--font-black); color: var(--navy); font-size: 1.45rem; margin: 4px 0 4px; }
+.step-head p { font-family: var(--font-book); color: var(--dark-grey); font-size: 0.97rem; max-width: 720px; }
 .video-grid.pair { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 720px) {
   .video-grid.pair { grid-template-columns: 1fr; }

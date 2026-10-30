@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blach AI Training Hub — Getting Started with Claude</title>
-  <meta name="description" content="Blach Construction's AI training hub. Watch, do, and explore your way to using Claude in your workday." />
+  <title>Blach AI Training Hub — Getting Started with AI</title>
+  <meta name="description" content="Blach Construction's AI training hub. Watch, do, and explore your way to using Claude or ChatGPT in your workday." />
   <link rel="icon" type="image/png" href="assets/img/blach-logo-bug-blue.png" />
   <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" />
@@ -26,7 +26,6 @@
         <a href="#watch">Watch &amp; Learn</a>
         <a href="#toolkit">The Toolkit</a>
         <a href="#guides">Guides</a>
-        <a href="chatgpt.html">ChatGPT</a>
         <div class="nav-dd">
           <button type="button" aria-haspopup="true" aria-expanded="false">Departments <span class="caret">▼</span></button>
           <div class="menu" role="menu">
@@ -54,9 +53,13 @@
   <section class="hero">
     <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
     <div class="wrap">
-      <span class="eyebrow">Build Better · with AI</span>
-      <h1>Getting Started with <span class="accent">Claude</span></h1>
-      <p class="lede">Your friendly home base for learning the AI tools we use at Blach. Watch a video, try it yourself, and explore at your own pace — we'll keep track of where you left off.</p>
+      <div class="ai-toggle" role="radiogroup" aria-label="Show tutorials for" data-active="claude">
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" role="radio" aria-checked="true" data-value="claude">Claude</button>
+        <button type="button" role="radio" aria-checked="false" data-value="chatgpt">ChatGPT</button>
+      </div>
+      <h1>Getting Started with <span class="accent">AI</span></h1>
+      <p class="lede">Your friendly home base for learning the AI tools we use at Blach. Pick Claude or ChatGPT above — whichever you've been set up with — then watch a video, try it yourself, and explore at your own pace. We'll keep track of where you left off.</p>
       <div class="hero-cta">
         <a href="#watch" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -86,6 +89,7 @@
   <!-- ============ WATCH & LEARN ============ -->
   <section class="block" id="watch">
     <div class="wrap">
+      <div class="track" data-track="claude">
       <div class="section-head reveal">
         <span class="kicker">Watch &amp; Learn</span>
         <h2>Learn by watching</h2>
@@ -243,12 +247,230 @@
         </article>
 
       </div>
+      </div>
+
+      <div class="track" data-track="chatgpt" hidden>
+      <div class="section-head reveal">
+        <span class="kicker">Watch &amp; Learn</span>
+        <h2>Learn by watching</h2>
+        <p>Four short steps, two videos each. Press play to start — clicking a video marks it complete, or use the button to track it yourself.</p>
+      </div>
+
+      <div class="step-head reveal">
+        <span class="kicker">Step 1 · The basics</span>
+        <h3>Getting started with ChatGPT</h3>
+        <p>Two beginner walkthroughs — how ChatGPT works and how to use it for real, everyday work. Press play to start; clicking a video marks it complete, or use the button to track it yourself.</p>
+      </div>
+
+      <div class="video-grid pair">
+
+        <!-- FULL TUTORIAL -->
+        <article class="video-card reveal" data-id="1XwbIoO1RqM" data-title="FULL ChatGPT Tutorial For Beginners in 2026">
+          <div class="vc-media">
+            <span class="vc-badge start">Start here</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/1XwbIoO1RqM/hqdefault.jpg" alt="Full ChatGPT tutorial for beginners thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Full ChatGPT Tutorial for Beginners (2026)</h3>
+            <p class="author"><b>AI Foundations</b> · a guided tour of the basics</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=1XwbIoO1RqM" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- GET WORK DONE -->
+        <article class="video-card reveal d1" data-id="poM2n8fBcag" data-title="ChatGPT Tutorial for Beginners: How to Actually Get Work Done with AI">
+          <div class="vc-media">
+            <span class="vc-badge tips">Everyday work</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/poM2n8fBcag/hqdefault.jpg" alt="How to actually get work done with ChatGPT thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>How to Actually Get Work Done with ChatGPT</h3>
+            <p class="author"><b>Kevin Stratvert</b> · putting ChatGPT to work</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=poM2n8fBcag" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="step-head reveal">
+        <span class="kicker">Step 2 · Skills</span>
+        <h3>Building ChatGPT Skills</h3>
+        <p>Package a repeatable task once so ChatGPT can do it the same way every time. Start with the 101, then go deeper with the full guide.</p>
+      </div>
+
+      <div class="video-grid pair">
+
+        <!-- SKILLS 101 -->
+        <article class="video-card reveal" data-id="w49OfWDTTDo" data-title="AI Skills 101: How to Build and Use Skills in ChatGPT">
+          <div class="vc-media">
+            <span class="vc-badge skills">Skills 101</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/w49OfWDTTDo/hqdefault.jpg" alt="AI Skills 101 thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>AI Skills 101: Build and Use Skills in ChatGPT</h3>
+            <p class="author"><b>Kyle Balmer</b> · what Skills are and how to use them</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=w49OfWDTTDo" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SKILLS FULL GUIDE -->
+        <article class="video-card reveal d1" data-id="JxQsEklz9eA" data-title="How to Build ChatGPT Skills Better Than 99% of People">
+          <div class="vc-media">
+            <span class="vc-badge workflows">Full guide</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/JxQsEklz9eA/hqdefault.jpg" alt="How to build ChatGPT Skills full guide thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>How to Build ChatGPT Skills (Full Guide)</h3>
+            <p class="author"><b>9x</b> · building better Skills, step by step</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=JxQsEklz9eA" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="step-head reveal">
+        <span class="kicker">Step 3 · Pages &amp; Spaces</span>
+        <h3>Organizing work in Pages &amp; Spaces</h3>
+        <p>Keep related chats, files and documents together. Get the plain-language overview first, then see real use cases for Spaces.</p>
+      </div>
+
+      <div class="video-grid pair">
+
+        <!-- PAGES & SPACES EXPLAINED -->
+        <article class="video-card reveal" data-id="rSDazS8If3g" data-title="ChatGPT Pages & Spaces Explained Simply">
+          <div class="vc-media">
+            <span class="vc-badge cowork">Explained</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/rSDazS8If3g/hqdefault.jpg" alt="ChatGPT Pages and Spaces explained thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>ChatGPT Pages &amp; Spaces Explained Simply</h3>
+            <p class="author"><b>The AI Cyclops Workshops</b> · a beginner's guide</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=rSDazS8If3g" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SPACE USE CASES -->
+        <article class="video-card reveal d1" data-id="RWCljagU6no" data-title="ChatGPT Space: 7 Incredible Use Cases">
+          <div class="vc-media">
+            <span class="vc-badge strategy">Use cases</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/RWCljagU6no/hqdefault.jpg" alt="ChatGPT Space use cases thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>ChatGPT Spaces: 7 Use Cases to Try</h3>
+            <p class="author"><b>Paul J Lipsky</b> · practical ways to use Spaces</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=RWCljagU6no" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="step-head reveal">
+        <span class="kicker">Step 4 · Sites</span>
+        <h3>Building with ChatGPT Sites</h3>
+        <p>Turn a prompt into a working web page. Follow the step-by-step tutorial, then see how far you can take it.</p>
+      </div>
+
+      <div class="video-grid pair">
+
+        <!-- SITES TUTORIAL -->
+        <article class="video-card reveal" data-id="OBdEOAObniA" data-title="Build websites with ChatGPT: ChatGPT Sites Tutorial">
+          <div class="vc-media">
+            <span class="vc-badge connect">Tutorial</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/OBdEOAObniA/hqdefault.jpg" alt="ChatGPT Sites tutorial thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>Build Websites with ChatGPT Sites</h3>
+            <p class="author"><b>Lukas Margerie</b> · a Sites walkthrough</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=OBdEOAObniA" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SITES BUILD ANYTHING -->
+        <article class="video-card reveal d1" data-id="mHqSBCHEZOY" data-title="How to Use ChatGPT Sites to Build Anything">
+          <div class="vc-media">
+            <span class="vc-badge design">Go further</span>
+            <span class="vc-done-flag"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+            <img class="thumb" loading="lazy" src="https://i.ytimg.com/vi/mHqSBCHEZOY/hqdefault.jpg" alt="Use ChatGPT Sites to build anything thumbnail" />
+            <div class="vc-play"><span class="pbtn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="vc-body">
+            <h3>How to Use ChatGPT Sites to Build Anything</h3>
+            <p class="author"><b>Riley Brown</b> · pushing Sites further</p>
+            <div class="vc-foot">
+              <button class="mark-btn" type="button">
+                <span class="box"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+                <span class="label">Mark complete</span>
+              </button>
+              <a class="yt-link" href="https://www.youtube.com/watch?v=mHqSBCHEZOY" target="_blank" rel="noopener">YouTube ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ TOOLKIT ============ -->
   <section class="block toolkit-wrap" id="toolkit">
     <div class="wrap">
+      <div class="track" data-track="claude">
       <div class="section-head reveal">
         <span class="kicker">The Toolkit</span>
         <h2>Learn by doing</h2>
@@ -327,6 +549,88 @@
         </article>
 
       </div>
+      </div>
+
+      <div class="track" data-track="chatgpt" hidden>
+      <div class="section-head reveal">
+        <span class="kicker">The Toolkit</span>
+        <h2>Learn by doing</h2>
+        <p>ChatGPT is one platform with a handful of tools — each suited to a different kind of work. Tap a card to mark it explored as you try each one.</p>
+      </div>
+
+      <div class="tool-grid">
+
+        <article class="tool-card reveal" data-key="gpt-chat">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/chat.png" alt="" /></div>
+          <h3>ChatGPT (Chat)</h3>
+          <p class="desc">The everyday assistant. Ask questions, draft and edit writing, summarize documents, search the web or run deep research through a simple conversation.</p>
+          <span class="useit"><b>Use it when</b>you need a fast first draft, a quick summary or a clear answer.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d1" data-key="gpt-projects">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/projects.png" alt="" /></div>
+          <h3>Projects</h3>
+          <p class="desc">A shared folder that keeps related chats, files and instructions together so every chat inside it starts with the right context.</p>
+          <span class="useit"><b>Use it when</b>you do recurring work like proposals and want ChatGPT primed every time.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d2" data-key="gpt-skills">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/skills.png" alt="" /></div>
+          <h3>Skills</h3>
+          <p class="desc">Saved, reusable workflows that ChatGPT applies when they fit the task — like our Blach branding and Blach voice skills.</p>
+          <span class="useit"><b>Use it when</b>you want on-brand, consistent output without re-explaining the rules.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal" data-key="gpt-apps">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/apps.png" alt="" /></div>
+          <h3>Apps (Connectors)</h3>
+          <p class="desc">Secure links between ChatGPT and the tools we already use, such as Microsoft 365 — with more Blach tools added as they're approved.</p>
+          <span class="useit"><b>Use it when</b>you want ChatGPT to look things up in company files and tools.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d1" data-key="gpt-space">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/space.png" alt="" /></div>
+          <h3>Space &amp; Pages</h3>
+          <p class="desc">Editable pages — briefs, meeting notes, team updates — organized into spaces you can share. Teammates with access can edit live.</p>
+          <span class="useit"><b>Use it when</b>you're writing a document you'll keep refining and share with the team.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal d2" data-key="gpt-sites">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/sites.png" alt="" /></div>
+          <h3>Sites</h3>
+          <p class="desc">Turn a prompt into a working web page or lightweight app — a tracker, dashboard or portal. New sites are private until you share them.</p>
+          <span class="useit"><b>Use it when</b>you want a simple interactive page without writing code.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card reveal" data-key="gpt-work">
+          <div class="check-corner"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div class="ti"><img src="assets/icons/work.png" alt="" /></div>
+          <h3>Work</h3>
+          <p class="desc">ChatGPT's agent mode for longer jobs. It plans and carries out multi-step work — research, spreadsheets, decks, reports — and checks with you before important actions.</p>
+          <span class="useit"><b>Use it when</b>a job has several steps and you want ChatGPT to run the whole sequence.</span>
+          <span class="tool-explore">✦ <span class="label">Tap to mark explored</span></span>
+        </article>
+
+        <article class="tool-card promo reveal d1" style="border-left-color:var(--cyan);background:linear-gradient(135deg,#003B64,#0076BB);color:#fff;cursor:default;">
+          <h3 style="color:#fff;">New here? Start simple ✨</h3>
+          <p class="desc" style="color:rgba(255,255,255,0.9);">Open Chat and ask ChatGPT to help with a real task you have today — a summary, an email or a first draft. Add Projects, Skills and Apps as your work grows.</p>
+          <span class="tool-explore" style="color:rgba(255,255,255,0.85);">You've got this!</span>
+        </article>
+
+      </div>
+      </div>
     </div>
   </section>
 
@@ -338,7 +642,7 @@
         <h2>Quick-start guides</h2>
         <p>Prefer a printable cheat sheet? Download the one-page guides to keep the toolkit handy at your desk.</p>
       </div>
-      <div class="guide-grid">
+      <div class="guide-grid track" data-track="claude">
         <a class="guide-card reveal" href="assets/guides/Claude_Quick_Start_Guide.pdf" target="_blank" rel="noopener" download>
           <div class="gicon"><span>PDF</span></div>
           <div class="gtext">
@@ -364,6 +668,32 @@
           <div class="dl">↓</div>
         </a>
       </div>
+      <div class="guide-grid track" data-track="chatgpt" hidden>
+        <a class="guide-card reveal" href="assets/guides/ChatGPT_Quick_Start_Guide.pdf" target="_blank" rel="noopener" download>
+          <div class="gicon"><span>PDF</span></div>
+          <div class="gtext">
+            <h3>Getting Started with ChatGPT</h3>
+            <p>The one-page quick-reference for the Blach team.</p>
+          </div>
+          <div class="dl">↓</div>
+        </a>
+        <a class="guide-card reveal d1" href="assets/guides/ChatGPT_Quick_Start_Guide_Icons.pdf" target="_blank" rel="noopener" download>
+          <div class="gicon"><span>PDF</span></div>
+          <div class="gtext">
+            <h3>Quick-Start Guide (Icon Edition)</h3>
+            <p>The same toolkit overview with visual icons.</p>
+          </div>
+          <div class="dl">↓</div>
+        </a>
+        <a class="guide-card reveal d2" href="assets/guides/Blach_ChatGPT_AI_Glossary.docx" target="_blank" rel="noopener" download>
+          <div class="gicon" style="background:linear-gradient(135deg,var(--dark-blue),var(--blach-blue));box-shadow:0 6px 16px rgba(0,72,122,0.25);"><span>DOC</span></div>
+          <div class="gtext">
+            <h3>Blach + ChatGPT AI Glossary</h3>
+            <p>Key AI and ChatGPT terms, defined for the Blach team.</p>
+          </div>
+          <div class="dl">↓</div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -376,7 +706,7 @@
         <a href="#" id="reset-progress" style="margin-left:auto;font-size:0.82rem;">Reset my progress</a>
       </div>
       <div class="note">
-        Internal training resource — please keep client names, project details and pricing confidential in Claude.<br />
+        Internal training resource — please keep client names, project details and pricing confidential in Claude and ChatGPT.<br />
         <span class="warn">Questions on Blach branding:</span> Kate Vernon, Senior Director of Marketing · <a href="mailto:kate.vernon@blach.com">kate.vernon@blach.com</a>
       </div>
     </div>
